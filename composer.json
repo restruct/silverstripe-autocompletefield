@@ -1,18 +1,30 @@
 {
-    "name": "restruct/silverstripe-autocompletefield",
-    "description": "Autocompletefield for Silverstripe (front-end)",
-    "type": "silverstripe-module",
-    "keywords": [
-        "silverstripe"
-    ],
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Restruct",
-            "email": "dev@restruct.nl"
-        }
-    ],
-    "require": {
-        "silverstripe/framework": "^3"
+  "name": "restruct/silverstripe-autocompletefield",
+  "description": "Autocompletefield for Silverstripe (front-end)",
+  "type": "silverstripe-vendormodule",
+  "keywords": [
+    "silverstripe"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Restruct",
+      "email": "dev@restruct.nl"
     }
+  ],
+  "require": {
+    "silverstripe/vendor-plugin": "^1",
+    "silverstripe/framework": "^4"
+  },
+  "extra": {
+    "expose": [
+      "client/bower_components/devbridge-autocomplete/dist",
+      "client/js"
+    ]
+  },
+  "autoload": {
+    "psr-4": {
+      "Restruct\\HTMLEditor\\DataFields\\": "src/"
+    }
+  }
 }
